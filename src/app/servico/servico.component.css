@@ -1,0 +1,15 @@
+.card{
+    margin: 1em;
+    padding: 0;
+}
+.card-header{
+    background-color: black;
+    color: papayawhip;
+    border: 0;
+}
+.card-body{
+    background: cadetblue;
+}
+.card-footer{
+    background: lavenderblush;
+}

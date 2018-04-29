@@ -1,4 +1,12 @@
+.card{
+    margin: 1em;
+}
+.card-body{
+    font-family: 'Lora', serif;
+
+}
 .card-header{
+    font-family: 'Roboto Mono', monospace;
     padding: 1em;
     background-color: lightblue;
 }
