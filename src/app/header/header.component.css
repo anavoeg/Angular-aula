@@ -1,0 +1,9 @@
+.nav-item{
+    border: solid white 0.1rem;
+    margin: 0.1rem;
+    background-color: hotpink;
+}
+.nav-link{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
