@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -9,6 +10,8 @@ import { ServicoComponent } from './servico/servico.component';
 import { ContatoComponent } from './contato/contato.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HeroesDetailComponent } from './heroes-detail/heroes-detail.component';
 
 
 @NgModule({
@@ -18,11 +21,14 @@ import { FooterComponent } from './footer/footer.component';
     ServicoComponent,
     ContatoComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HeroesComponent,
+    HeroesDetailComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
