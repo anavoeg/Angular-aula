@@ -1,0 +1,49 @@
+<div class="container">
+    <h3>Lista de Compras</h3>
+    <ul>
+        <li *ngFor="let compra of lista" (click)="selected(compra)" [class.selected]="compra === selectedCompra">
+            {{compra.produto}} {{compra.valor | currency:'BRL':true}}
+        </li>
+        <li> {{lista.produto}} {{lista.valor}}</li>
+    </ul>
+    <h4>Nova Compra</h4>
+
+    <label>ID</label>
+    <input type="text" [(ngModel)]="compra.id" name="produto">
+    <br> <br>
+
+    <label>Nome do Produto</label>
+    <input type="text" [(ngModel)]="compra.produto" name="produto">
+    <br> <br>
+
+    <label>Quantidade</label>
+    <input type="text" [(ngModel)]="compra.quantidade" name="produto">
+    <br> <br>
+
+    <label>Valor</label>
+    <input type="text" [(ngModel)]="compra.valor" name="produto">
+    <br> <br>
+
+<div *ngIf="selectedCompra">
+    <h4>Detalhes: </h4>
+    <span>ID: {{selectedCompra.id}}</span> 
+    <br><br>
+    <span>Nome do Produto: {{selectedCompra.produto}}</span> 
+    <br><br>
+    <span>Quantidade: {{selectedCompra.quantidade}}</span> 
+    <br><br>
+    <span>Valor: {{selectedCompra.valor | currency:'BRL':true}}</span> 
+    <br><br>
+</div>
+
+
+    <button (click)="add()">Add</button>
+
+
+    <!--<label>Produto e preço:
+    <input #newProduto 
+        (keyup.enter)="addProduto(newproduto.value)"
+        (blur)="addProduto(newProduto.value); newProduto.value='' " placeholder="name">
+  </label>
+  <button (click)="addProduto(compra)">OK</button>-->
+</div>

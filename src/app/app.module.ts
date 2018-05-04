@@ -10,8 +10,7 @@ import { ServicoComponent } from './servico/servico.component';
 import { ContatoComponent } from './contato/contato.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { HeroesDetailComponent } from './heroes-detail/heroes-detail.component';
+import { ComprasComponent } from './compras/compras.component';
 
 
 @NgModule({
@@ -22,8 +21,7 @@ import { HeroesDetailComponent } from './heroes-detail/heroes-detail.component';
     ContatoComponent,
     HeaderComponent,
     FooterComponent,
-    HeroesComponent,
-    HeroesDetailComponent
+    ComprasComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,31 @@
+
+h3, h4{
+    text-align: center;
+    color: dodgerblue;
+    border: 0.1em solid silver;
+    padding: 1em;
+    margin-top: 1em; 
+    font-family: 'Muli', sans-serif;
+
+}
+ul{
+    list-style: none;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+    padding: 1em;
+}
+ul li{
+    font-family: 'Muli', sans-serif;
+    color: darkgoldenrod;
+    padding: 0.3em;
+    cursor: pointer;
+}
+.selected{
+    color: cadetblue !important;
+    font-weight: 600;
+    font-style: italic;
+}
+input{
+    align-items: center;
+    margin-left: 1em;
+}
