@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Compra } from '../model/compra';
-import { LISTACOMPRAS } from "../model/lista-compras";
+import { Produto } from '../model/produto';
+import { LISTAPRODUTO } from "../model/mock-produto";
 
 @Component({
   selector: 'app-compras',
@@ -9,14 +9,12 @@ import { LISTACOMPRAS } from "../model/lista-compras";
 })
 export class ComprasComponent implements OnInit {
 
-
-  lista: Compra[] = LISTACOMPRAS;
-  compra: Compra = new Compra();
-  selectedCompra: Compra;
-
+  lista: Produto[] = LISTAPRODUTO;
+  carrinho: Produto[];
+  total: number = 0;
   // addProduto(newProduto: string) {
   //   if (newProduto) {
-  //     this.compra.push(newProduto);
+  //     this.produto.push(newProduto);
   //   }
   // }
 
@@ -25,17 +23,32 @@ export class ComprasComponent implements OnInit {
   ngOnInit() {
   }
 
-  add(){
-    let c = new Compra();
-    c.produto = this.compra.produto;
-    c.id = this.compra.id;
-    c.quantidade = this.compra.quantidade;
-    c.valor = this.compra.valor;
-    // console.log(this.compra.produto);
-    this.lista.push(c);
+  addCarrinho(produto: Produto) {
+
+    if(!this.verificaItemCarrinho(produto)) {
+      this.carrinho.push(produto);
+      this.totalCarrinho();
+
+    }
   }
 
-  selected(obj: Compra) {
-    this.selectedCompra = obj;
+  totalCarrinho(): void {
+    let tot = 0;
+    for (let selectedProduto of this.carrinho) {
+      tot = tot + selectedProduto.preco;
+    }
+    this.total = tot;
+  }
+
+  verificaItemCarrinho(produto: Produto): boolean {
+    let existe = false;
+
+    for(let item of this.carrinho) {
+      if(item.id === produto.id){
+        existe  = true;
+
+      }    
+    }
+    return existe;
   }
 }

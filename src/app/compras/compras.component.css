@@ -14,7 +14,14 @@ ul{
     border-bottom: 2px solid red;
     padding: 1em;
 }
-ul li{
+centered{
+    margin-left:1em; 
+}
+.card{
+    margin: 0.2em;
+    background: ghostwhite;
+}
+.card-title{
     font-family: 'Muli', sans-serif;
     color: darkgoldenrod;
     padding: 0.3em;
