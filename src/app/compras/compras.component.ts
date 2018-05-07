@@ -34,8 +34,8 @@ export class ComprasComponent implements OnInit {
 
   totalCarrinho(): void {
     let tot = 0;
-    for (let selectedProduto of this.carrinho) {
-      tot = tot + selectedProduto.preco;
+    for (let item of this.carrinho) {
+      tot = tot + item.preco;
     }
     this.total = tot;
   }

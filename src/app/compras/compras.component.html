@@ -30,14 +30,14 @@
       
   </div>
 
-<div *ngFor="let selectedProduto of carrinho">
+<div *ngFor="let item of carrinho">
     <h4>Sua Compra: </h4><br><br>
     <h5>Total: {{total | currency:'BRL':true}}</h5>
-    <span>Nome do Produto: {{selectedProduto.nome}}</span> 
+    <span>Nome do Produto: {{item.nome}}</span> 
     <br><br>
-    <span>Foto do Produto: <img src="../assets/produtos/{{selectedProduto.imagem}}"> </span> 
+    <span>Foto do Produto: <img src="../assets/produtos/{{item.imagem}}"> </span> 
     <br><br>
-    <span>Preço: {{selectedProduto.preco | currency:'BRL':true}}</span> 
+    <span>Preço: {{item.preco | currency:'BRL':true}}</span> 
     <br><br>
 </div>
 
