@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Cadastro</h1>
+  <form [formGroup]="formGroup" (ngSubmit)="enviar()">
+
+    <label>Nome</label>
+    <input formControlName="nome" type="text" />
+    <p *ngIf="formGroup.controls.nome.dirty && formGroup.controls.nome.errors"></p>
+
+    <label>Endereço</label>
+    <input formControlName="endereco" type="text" />
+    <span *ngIf="formGroup.controls.endereco.dirty && formGroup.controls.endereco.errors"></span>
+
+    <label>Email</label>
+    <input formControlName="email" type="text" />
+    <span *ngIf="formGroup.controls.email.dirty && formGroup.controls.email.errors"></span>
+
+    <label>Senha</label>
+    <input formControlName="senha" type="password" />
+    <span *ngIf="formGroup.controls.senha.dirty && formGroup.controls.senha.errors"></span>
+
+
+    <button type="submit" [disabled]="formGroup.invalid">Enviar</button>
+
+  </form>
+
+</div>

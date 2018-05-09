@@ -1,0 +1,13 @@
+<div class="container content" *ngFor="let item of carrinho">
+    <h4>Sua Compra: </h4><br><br>
+    <h5>Total: {{total | currency:'BRL':true}}</h5>
+        <div class="row">
+            <span class="col-md-3">Nome do Produto: {{item.nome}}</span> 
+            <br><br>
+            <span class="col-md-3">Foto do Produto: <img src="../assets/produtos/{{item.imagem}}"> </span> 
+            <br><br>
+            <span class="col-md-3">Preço: {{item.preco | currency:'BRL':true}}</span> 
+            <div class="cold-md-1"><button class="btn btn-danger" (click)="remove(item)">X</button></div>
+            <br><br>
+        </div>    
+</div>

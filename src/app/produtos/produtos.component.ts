@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Produto } from "../model/produto";
-import { PRODUTOS } from "../model/mock-produto";
+import { Produto } from '../model/produto';
+import { LISTAPRODUTO } from "../model/mock-produto";
+import { StorageService } from "../services/storage.service";
 
 @Component({
   selector: 'app-produtos',
@@ -9,12 +10,13 @@ import { PRODUTOS } from "../model/mock-produto";
 })
 export class ProdutosComponent implements OnInit {
 
-  produtos: Produto[] = PRODUTOS; // produtos da lista
+  produtos: Produto[] = LISTAPRODUTO; // produtos da lista
   carrinho: Produto[]; // produtos do carrinho
   total: number = 0;
 
-  constructor() {
-    this.carrinho = new Array<Produto>();
+  constructor(public storage: StorageService) {// Injetando o Service Storage
+    //Sempre declarar o StorageService no app.module.ts
+    this.carrinho = storage.getCarrinho();
   }
 
   ngOnInit() {
@@ -25,6 +27,7 @@ export class ProdutosComponent implements OnInit {
       this.carrinho.push(produto); // produto recebido no método é adicionado em carrinho
       //console.log(this.carrinho.length);
       this.totalCarrinho();
+      this.storage.setCarrinho(this.carrinho);
     //}
   }
 
@@ -34,9 +37,7 @@ export class ProdutosComponent implements OnInit {
       tot = tot + item.preco;
     }
     this.total = tot;
-
   }
-
 
   verificaItemCarrinho(produto: Produto): boolean {
     let existe = false;
@@ -46,15 +47,6 @@ export class ProdutosComponent implements OnInit {
         existe = true;
       }
     }
-
-      return existe;
+          return existe;
   }
-
-
-}
-
-
-  
-
-
 }
