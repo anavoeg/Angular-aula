@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Produto } from "../model/produto";
-import { StorageService } from "../services/storage.service";
+import { Produto } from '../model/produto';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-carrinho',
@@ -18,9 +18,9 @@ export class CarrinhoComponent implements OnInit {
 
   ngOnInit() {
   }
-  remove(produto: Produto){
+  remove(produto: Produto) {
     // console.log(produto);
-    this.carrinho = this.carrinho.filter(item => item.id != produto.id);
+    this.carrinho = this.carrinho.filter(item => item.id !== produto.id);
     this.storage.setCarrinho(this.carrinho);
   }
 }
