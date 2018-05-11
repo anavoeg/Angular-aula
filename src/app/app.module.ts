@@ -14,6 +14,8 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { StorageService } from "./services/storage.service";
 import { CadastroComponent } from "./cadastro/cadastro.component";
+import { EnderecoService } from "./services/endereco.service";
+import { HttpClientModule } from "@angular/common/http";
 
 
 @NgModule({
@@ -32,9 +34,10 @@ import { CadastroComponent } from "./cadastro/cadastro.component";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule //se utilizar webservices
   ],
-  providers: [StorageService],
+  providers: [StorageService, EnderecoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
