@@ -10,12 +10,11 @@ import { ServicoComponent } from './servico/servico.component';
 import { ContatoComponent } from './contato/contato.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ProdutosComponent } from './produtos/produtos.component';
-import { CarrinhoComponent } from './carrinho/carrinho.component';
-import { StorageService } from "./services/storage.service";
-import { CadastroComponent } from "./cadastro/cadastro.component";
-import { EnderecoService } from "./services/endereco.service";
 import { HttpClientModule } from "@angular/common/http";
+import { AlunoService } from "./services/aluno.service";
+import { ListaAlunosComponent } from './lista-alunos/lista-alunos.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { ClienteService } from "./services/cliente.service";
 
 
 @NgModule({
@@ -26,9 +25,8 @@ import { HttpClientModule } from "@angular/common/http";
     ContatoComponent,
     HeaderComponent,
     FooterComponent,
-    ProdutosComponent,
-    CarrinhoComponent,
-    CadastroComponent
+    ListaAlunosComponent,
+    CadastroComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +35,7 @@ import { HttpClientModule } from "@angular/common/http";
     ReactiveFormsModule,
     HttpClientModule //se utilizar webservices
   ],
-  providers: [StorageService, EnderecoService],
+  providers: [AlunoService, ClienteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
