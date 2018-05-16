@@ -11,10 +11,13 @@ import { ContatoComponent } from './contato/contato.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from "@angular/common/http";
-import { AlunoService } from "./services/aluno.service";
-import { ListaAlunosComponent } from './lista-alunos/lista-alunos.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-import { ClienteService } from "./services/cliente.service";
+import { Livro } from "./model/livro";
+import { LivrosComponent } from './livros/livros.component';
+import { LivroService } from "./services/livro.service";
+import { CarrosComponent } from './carros/carros.component';
+import { CarroService } from "./services/carros.service";
+import { CadastroLivroComponent } from './cadastro-livro/cadastro-livro.component';
 
 
 @NgModule({
@@ -25,8 +28,10 @@ import { ClienteService } from "./services/cliente.service";
     ContatoComponent,
     HeaderComponent,
     FooterComponent,
-    ListaAlunosComponent,
     CadastroComponent,
+    LivrosComponent,
+    CarrosComponent,
+    CadastroLivroComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,7 @@ import { ClienteService } from "./services/cliente.service";
     ReactiveFormsModule,
     HttpClientModule //se utilizar webservices
   ],
-  providers: [AlunoService, ClienteService],
+  providers: [LivroService, CarroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
