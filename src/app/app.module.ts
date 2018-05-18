@@ -18,6 +18,7 @@ import { LivroService } from "./services/livro.service";
 import { CarrosComponent } from './carros/carros.component';
 import { CarroService } from "./services/carros.service";
 import { CadastroLivroComponent } from './cadastro-livro/cadastro-livro.component';
+import { CadastroCarrosComponent } from './cadastro-carros/cadastro-carros.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { CadastroLivroComponent } from './cadastro-livro/cadastro-livro.componen
     LivrosComponent,
     CarrosComponent,
     CadastroLivroComponent,
+    CadastroCarrosComponent,
   ],
   imports: [
     BrowserModule,

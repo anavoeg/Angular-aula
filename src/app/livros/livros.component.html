@@ -1,5 +1,6 @@
+<app-cadastro-livro></app-cadastro-livro>
 <div class="container">
-  <h3>Lista de Livros</h3>
+  <h3>Lista de Livros ({{listCount}})</h3>
   <div class="row">
   <div class="card col-md-5" style="width: 18rem;" *ngFor ="let livro of livros">
     <div class="card-header">Gênero: {{livro.genero}}</div>

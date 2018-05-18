@@ -4,15 +4,15 @@
 
     <label>Título</label>
     <input type="text" formControlName="titulo" class="form-control" />
-    <span *ngIf="formGroup.controls.titulo.dirty && formGroup.controls.titulo.erros">Valor Inválido</span>
+    <span *ngIf="formGroup.controls.titulo.dirty && formGroup.controls.titulo.errors">Valor Inválido</span><br><br>
 
     <label>Gênero</label>
     <input type="text" formControlName="genero" class="form-control" />
-    <span *ngIf="formGroup.controls.genero.dirty && formGroup.controls.genero.erros">Valor Inválido</span>
+    <span *ngIf="formGroup.controls.genero.dirty && formGroup.controls.genero.errors">Valor Inválido</span><br><br>
 
     <label>Autor</label>
     <input type="text" formControlName="autor" class="form-control" />
-    <span *ngIf="formGroup.controls.autor.dirty && formGroup.controls.autor.erros">Valor Inválido</span>
+    <span *ngIf="formGroup.controls.autor.dirty && formGroup.controls.autor.errors">Valor Inválido</span><br><br>
 
     <button type="submit" [disabled]="formGroup.invalid" class="btn btn-light">Cadastrar</button>
   </form>
